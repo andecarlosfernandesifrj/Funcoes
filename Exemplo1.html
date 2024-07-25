@@ -9,17 +9,23 @@
     <h1>Exemplo 1</h1>
     <h2>Funções</h2>
     <p>Criar uma função que multiplica dois números e retorna o resultado para uma variável.</p>
-    
+    <p><b>Versão 2:</b> O usuário vai digitar dois valores em caixas input, clicar no botão calcular e mostrar o resultado.</p>
+    <input type="text">
+    <input type="text">
+    <button onclick="calcular();">Calcular</button>
     <p id="resultado" style="font-weight: bold;"></p>
     
     <script>
-        let x = multiplica(4,5);
+    function calcular(){
+        let n1 = document.getElementsByTagName("input")[0].value;
+        let n2 = document.getElementsByTagName("input")[1].value;
+        let x = multiplica(n1, n2);
         document.getElementById("resultado").innerHTML = x;
 
         function multiplica(a, b){
             return a*b;
         }
-
+    }
     </script>
 </body>
 </html>
